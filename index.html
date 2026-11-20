@@ -4,40 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robbie | Home</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="planes.html">Planes</a>
+    <nav class="navbar">
+      <a class="nav-link active" href="index.html">Home</a>
+      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link" href="planes.html">Planes</a>
     </nav>
 
-    <header>
+    <header class="hero">
       <h1 class="header1">Welcome to my website</h1>
       <p class="plainText">This is where I store projects, ideas and things I like to do.</p>
-      <a class="linkPlain" href="projecten.html">Take a look</a>
+      <a class="linkPlain" href="projects.html">Take a look</a>
     </header>
 
     <main>
-      <section>
+      <section class="highlights">
         <h2>On this website</h2>
-        <article>
-          <h3>Aeronautics</h3>
-          <p>I like planes. They're fascinating and there's always something new to discover.</p>
-        </article>
-        <article>
-          <h3>Code &amp; webexperiments</h3>
-          <p>Play with HTML, CSS and other tools to improve things or just make fun.</p>
-        </article>
+        <div class="cards">
+          <article class="card">
+            <h3>Aeronautics</h3>
+            <p>I like planes. They're fascinating and there's always something new to discover.</p>
+          </article>
+          <article class="card">
+            <h3>Code &amp; webexperiments</h3>
+            <p>Play with HTML, CSS and other tools to improve things or just make fun.</p>
+          </article>
+        </div>
       </section>
     </main>
-    
+
     <footer>
-      <p>Made by IAmEpicrobbie5 with GitHub Pages</p>
+      <p>Made by IAmEpicRobbie5 with GitHub Pages</p>
     </footer>
   </body>
 </html>
-  toggleBtn.addEventListener("click", openMenu);
-  closeBtn.addEventListener("click", closeMenu);
-  overlay.addEventListener("click", closeMenu);
-</script>
