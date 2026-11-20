@@ -145,3 +145,21 @@ footer {
   color: #94a3b8;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
+/* 404-pagina */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #3b82f6;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.35);
+  margin-bottom: 16px;
+}
