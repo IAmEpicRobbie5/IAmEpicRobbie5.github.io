@@ -37,24 +37,6 @@
     </footer>
   </body>
 </html>
-<script>
-  const toggleBtn = document.getElementById("toggleSidebar");
-  const closeBtn = document.getElementById("closeSidebar");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
-
-  function openMenu() {
-    sidebar.classList.add("open");
-    overlay.classList.add("active");
-    toggleBtn.setAttribute("aria-expanded", "true");
-  }
-
-  function closeMenu() {
-    sidebar.classList.remove("open");
-    overlay.classList.remove("active");
-    toggleBtn.setAttribute("aria-expanded", "false");
-  }
-
   toggleBtn.addEventListener("click", openMenu);
   closeBtn.addEventListener("click", closeMenu);
   overlay.addEventListener("click", closeMenu);
