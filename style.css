@@ -121,6 +121,21 @@ main {
   color: #cbd5e1;
 }
 
+.linkPlain-small {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.linkPlain-small:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
 /* Footer */
 footer {
   background-color: #080e21;
