@@ -1,24 +1,74 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Nothing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robbie | Home</title>
   </head>
   <body>
-    <div>
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <h6>H6</h6>
-      <p>plain text</p>
-      <a href="[https://IAmEpicRobbie5.github.com](https://IAmEpicRobbie5.github.com)">Website</a>
-      <ul>
-        <li>list</li>
-        <li>list</li>
-        <li>list</li>
-      </ul>
-    </div>
+    <button id="toggleSidebar" class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar">
+      ☰ Menu
+    </button>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h2>Navigatie</h2>
+        <button id="closeSidebar" class="sidebar-close" aria-label="Sluit menu">✕</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a class="sidebarButton" href="index.html">Home</a>
+        <a class="sidebarButton" href="projecten.html">Projects</a>
+        <a class="sidebarButton" href="vliegtuigen.html">Planes</a>
+      </nav>
+    </aside>
+
+    <div id="overlay" class="overlay"></div>
+
+    <header>
+      <h1 class="header1">Welcome to my website</h1>
+      <p class="plainText">This is where I store projects, ideas and things I like to do.</p>
+      <a class="linkPlain" href="projecten.html">Take a look</a>
+    </header>
+
+    <main>
+      <section>
+        <h2>On this website</h2>
+        <article>
+          <h3>Aeronautics</h3>
+          <p>I like planes. They're fascinating and there's always something new to discover.</p>
+        </article>
+        <article>
+          <h3>Code &amp; webexperiments</h3>
+          <p>Play with HTML, CSS and other tools to improve things or just make fun.</p>
+        </article>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Made by IAmEpicrobbie5 with GitHub Pages</p>
+    </footer>
   </body>
 </html>
+<script>
+  const toggleBtn = document.getElementById("toggleSidebar");
+  const closeBtn = document.getElementById("closeSidebar");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+
+  function openMenu() {
+    sidebar.classList.add("open");
+    overlay.classList.add("active");
+    toggleBtn.setAttribute("aria-expanded", "true");
+  }
+
+  function closeMenu() {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("active");
+    toggleBtn.setAttribute("aria-expanded", "false");
+  }
+
+  toggleBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+</script>
