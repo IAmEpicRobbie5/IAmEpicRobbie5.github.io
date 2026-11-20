@@ -126,8 +126,8 @@ main {
   background-color: #2563eb;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 400;
-  padding: 12px 24px;
+  font-weight: 550;
+  padding: 10px 20px;
   border-radius: 8px;
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
