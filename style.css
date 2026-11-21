@@ -166,7 +166,7 @@ footer {
 /* Projects pagina */
 .projects-main {
   flex: 1;
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 36px 20px 56px;
@@ -182,7 +182,7 @@ footer {
 .filter-btn {
   background-color: #132248;
   color: #cbd5e1;
-  border: 1px solid rgba(147, 197, 253, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
   padding: 8px 16px;
   font-size: 0.95rem;
@@ -192,38 +192,38 @@ footer {
 }
 
 .filter-btn:hover {
-  border-color: #60a5fa;
+  border-color: #ffffff;
   color: #ffffff;
 }
 
 .filter-btn.active {
   background-color: #2563eb;
-  border-color: #3b82f6;
+  border-color: #ffffff;
   color: #ffffff;
 }
 
+/* Kaders onder elkaar in één kolom */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Wit kader per project */
 .project-card {
-  background-color: #132248;
-  border: 1px solid rgba(147, 197, 253, 0.2);
-  border-radius: 14px;
+  background-color: #102047;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 16px;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  gap: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  border-color: #60a5fa;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
 }
 
 .project-card.hidden {
@@ -235,7 +235,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  margin-bottom: 12px;
 }
 
 .status-badge {
@@ -248,36 +247,35 @@ footer {
 }
 
 .status-active {
-  background-color: rgba(37, 99, 235, 0.28);
+  background-color: rgba(37, 99, 235, 0.3);
   color: #93c5fd;
-  border: 1px solid rgba(96, 165, 250, 0.45);
+  border: 1px solid #93c5fd;
 }
 
 .status-idea {
-  background-color: rgba(16, 185, 129, 0.2);
+  background-color: rgba(16, 185, 129, 0.22);
   color: #6ee7b7;
-  border: 1px solid rgba(52, 211, 153, 0.4);
+  border: 1px solid #6ee7b7;
 }
 
 .status-planned {
-  background-color: rgba(245, 158, 11, 0.2);
+  background-color: rgba(245, 158, 11, 0.22);
   color: #fcd34d;
-  border: 1px solid rgba(251, 191, 36, 0.4);
+  border: 1px solid #fcd34d;
 }
 
 .project-tag {
-  font-size: 0.82rem;
-  color: #94a3b8;
+  font-size: 0.85rem;
+  color: #cbd5e1;
 }
 
 .project-card h2 {
   font-size: 1.3rem;
   color: #ffffff;
-  margin-bottom: 8px;
 }
 
 .project-card p {
-  color: #cbd5e1;
+  color: #e2e8f0;
   font-size: 0.96rem;
 }
 
@@ -285,21 +283,24 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   font-size: 0.9rem;
 }
 
 .project-note {
-  color: #94a3b8;
+  color: #cbd5e1;
 }
 
 .project-link {
-  color: #93c5fd;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
 }
 
+.project-link:hover {
+  text-decoration: underline;
+}
 .project-link:hover {
   color: #ffffff;
   text-decoration: underline;
