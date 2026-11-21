@@ -22,13 +22,6 @@
     </header>
 
     <main class="projects-main">
-      <div class="filter-bar" role="group" aria-label="Filter projects">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web &amp; UI</button>
-        <button class="filter-btn" data-filter="tools">Tools &amp; Scripts</button>
-        <button class="filter-btn" data-filter="aviation">Aviation</button>
-      </div>
-
       <section class="projects-grid">
         <article class="project-card" data-category="web">
           <div class="project-top">
@@ -44,76 +37,10 @@
             <a class="project-link" href="index.html">View home →</a>
           </div>
         </article>
-
-        <article class="project-card" data-category="tools">
-          <div class="project-top">
-            <span class="status-badge status-idea">Experiment</span>
-            <span class="project-tag">Userscript · CSS</span>
-          </div>
-          <h2>Interface Customizer</h2>
-          <p>
-            Small browser tweaks and custom stylesheets to adjust colors, popups, and layouts on websites I use regularly.
-          </p>
-          <div class="project-footer">
-            <span class="project-note">Tweaking UI</span>
-            <a class="project-link" href="desktops.html">See setups →</a>
-          </div>
-        </article>
-
-        <article class="project-card" data-category="aviation">
-          <div class="project-top">
-            <span class="status-badge status-planned">Planned</span>
-            <span class="project-tag">Research · Data</span>
-          </div>
-          <h2>Aircraft Comparisons</h2>
-          <p>
-            Side-by-side notes and comparisons of iconic aircraft, commercial jets, supersonic flyers, and helicopters.
-          </p>
-          <div class="project-footer">
-            <span class="project-note">Hangar notes</span>
-            <a class="project-link" href="planes.html">Go to planes →</a>
-          </div>
-        </article>
-
-        <article class="project-card" data-category="tools">
-          <div class="project-top">
-            <span class="status-badge status-idea">Mini-project</span>
-            <span class="project-tag">Desktop · Automation</span>
-          </div>
-          <h2>Daily Utility Scripts</h2>
-          <p>
-            Lightweight scripts and file helpers to keep folders tidy, automate repetitive steps, and test new ideas quickly.
-          </p>
-          <div class="project-footer">
-            <span class="project-note">Sandbox</span>
-            <a class="project-link" href="desktops.html">Explore →</a>
-          </div>
-        </article>
-      </section>
     </main>
 
     <footer>
       <p>Made by IAmEpicRobbie5 with GitHub Pages</p>
     </footer>
-
-    <script>
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const projectCards = document.querySelectorAll(".project-card");
-
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          const selectedFilter = button.dataset.filter;
-
-          filterButtons.forEach((btn) => btn.classList.remove("active"));
-          button.classList.add("active");
-
-          projectCards.forEach((card) => {
-            const matches =
-              selectedFilter === "all" || card.dataset.category === selectedFilter;
-            card.classList.toggle("hidden", !matches);
-          });
-        });
-      });
-    </script>
   </body>
 </html>
