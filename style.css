@@ -172,36 +172,6 @@ footer {
   padding: 36px 20px 56px;
 }
 
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-.filter-btn {
-  background-color: #132248;
-  color: #cbd5e1;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-.filter-btn:hover {
-  border-color: #ffffff;
-  color: #ffffff;
-}
-
-.filter-btn.active {
-  background-color: #2563eb;
-  border-color: #ffffff;
-  color: #ffffff;
-}
-
 /* Kaders onder elkaar in één kolom */
 .projects-grid {
   display: flex;
