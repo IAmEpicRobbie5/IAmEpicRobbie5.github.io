@@ -1,8 +1,10 @@
-/* Nieuwe intro-look voor de Planes-pagina */
+/* Complete stijl voor de Planes-pagina */
 .planes-body {
   background-color: #070d1f;
+  color: #f1f5f9;
 }
 
+/* Hangar Intro */
 .hangar-intro {
   position: relative;
   overflow: hidden;
@@ -12,7 +14,6 @@
   padding: 56px 24px;
 }
 
-/* Subtiel radar-/coördinatenraster op de achtergrond */
 .hangar-grid-bg {
   position: absolute;
   inset: 0;
@@ -27,7 +28,7 @@
 .hangar-inner {
   position: relative;
   z-index: 1;
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto;
   text-align: left;
   border-left: 4px solid #38bdf8;
@@ -73,7 +74,6 @@
   margin-bottom: 28px;
 }
 
-/* Kleine instrumenten-/statusbalk onder de introtekst */
 .hangar-telemetry {
   display: flex;
   flex-wrap: wrap;
@@ -102,22 +102,23 @@
   font-weight: 600;
   color: #ffffff;
 }
-/* Hoofdinhoud en kaarten op de Planes-pagina */
+
+/* Onderste sectie met kaarten */
 .hangar-main {
   flex: 1;
-  max-width: 1020px;
+  max-width: 980px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 24px 60px;
+  padding: 44px 24px 64px;
 }
 
 .hangar-section-head {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 24px;
-  border-left: 3px solid #38bdf8;
-  padding-left: 14px;
+  margin-bottom: 28px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 16px;
 }
 
 .hangar-code {
@@ -128,34 +129,42 @@
 }
 
 .hangar-section-head h2 {
-  font-size: 1.55rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: #ffffff;
 }
 
+/* 2 kolommen op desktop, 1 kolom op mobiel */
 .aircraft-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 700px) {
+  .aircraft-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .aircraft-card {
-  position: relative;
-  background: linear-gradient(160deg, rgba(16, 32, 71, 0.95) 0%, rgba(9, 19, 44, 0.98) 100%);
-  border: 1px solid rgba(125, 211, 252, 0.25);
+  background: linear-gradient(160deg, #102047 0%, #0b1636 100%);
+  border: 1px solid rgba(125, 211, 252, 0.3);
   border-top: 3px solid #38bdf8;
-  border-radius: 10px;
-  padding: 22px;
+  border-radius: 12px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 14px;
+  gap: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .aircraft-card:hover {
   transform: translateY(-4px);
   border-color: #7dd3fc;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.42);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.45);
 }
 
 .card-meta {
@@ -163,32 +172,35 @@
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  margin-bottom: 14px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.76rem;
 }
 
 .card-id {
   color: #7dd3fc;
+  font-weight: 700;
   letter-spacing: 0.08em;
 }
 
 .card-era {
   color: #e0f2fe;
-  background-color: rgba(56, 189, 248, 0.14);
-  border: 1px solid rgba(125, 211, 252, 0.3);
-  padding: 3px 9px;
-  border-radius: 4px;
+  background-color: rgba(56, 189, 248, 0.16);
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 
 .aircraft-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: #ffffff;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .aircraft-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.96rem;
+  line-height: 1.65;
   color: #cbd5e1;
 }
 
@@ -197,9 +209,9 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(125, 211, 252, 0.16);
+  padding-top: 14px;
+  border-top: 1px solid rgba(125, 211, 252, 0.2);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   color: #93c5fd;
 }
