@@ -55,7 +55,27 @@
   height: 8px;
   border-radius: 50%;
   background-color: #38bdf8;
-  box-shadow: 0 0 10px #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.7), 0 0 12px rgba(56, 189, 248, 0.35);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.22);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 1), 0 0 22px rgba(56, 189, 248, 0.75);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-dot {
+    animation: none;
+  }
 }
 
 .hangar-title {
