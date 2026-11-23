@@ -102,3 +102,104 @@
   font-weight: 600;
   color: #ffffff;
 }
+/* Hoofdinhoud en kaarten op de Planes-pagina */
+.hangar-main {
+  flex: 1;
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.hangar-section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+  border-left: 3px solid #38bdf8;
+  padding-left: 14px;
+}
+
+.hangar-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: #7dd3fc;
+}
+
+.hangar-section-head h2 {
+  font-size: 1.55rem;
+  color: #ffffff;
+}
+
+.aircraft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.aircraft-card {
+  position: relative;
+  background: linear-gradient(160deg, rgba(16, 32, 71, 0.95) 0%, rgba(9, 19, 44, 0.98) 100%);
+  border: 1px solid rgba(125, 211, 252, 0.25);
+  border-top: 3px solid #38bdf8;
+  border-radius: 10px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.aircraft-card:hover {
+  transform: translateY(-4px);
+  border-color: #7dd3fc;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.42);
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.76rem;
+}
+
+.card-id {
+  color: #7dd3fc;
+  letter-spacing: 0.08em;
+}
+
+.card-era {
+  color: #e0f2fe;
+  background-color: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  padding: 3px 9px;
+  border-radius: 4px;
+}
+
+.aircraft-card h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.aircraft-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(125, 211, 252, 0.16);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.76rem;
+  color: #93c5fd;
+}
