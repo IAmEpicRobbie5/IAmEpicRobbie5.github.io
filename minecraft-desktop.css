@@ -1,0 +1,161 @@
+/* Stijl voor minecraft-desktop.html */
+.mc-body {
+  background-color: #091229;
+  color: #f1f5f9;
+}
+
+/* Header / Intro */
+.mc-hero {
+  background: linear-gradient(135deg, #0e1d42 0%, #172e66 100%);
+  border-bottom: 1px solid rgba(147, 197, 253, 0.22);
+  padding: 52px 24px;
+  text-align: center;
+}
+
+.mc-badge {
+  display: inline-block;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: #93c5fd;
+  background-color: rgba(9, 18, 41, 0.65);
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.mc-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.mc-intro {
+  max-width: 660px;
+  margin: 0 auto 26px auto;
+  color: #dbeafe;
+  font-size: 1.05rem;
+}
+
+.mc-specs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.mc-spec {
+  background-color: rgba(9, 18, 41, 0.7);
+  border: 1px solid rgba(147, 197, 253, 0.25);
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.mc-spec-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #93c5fd;
+}
+
+.mc-spec-value {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+/* Hoofdinhoud */
+.mc-main {
+  flex: 1;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.mc-section {
+  background-color: #102047;
+  border: 1px solid rgba(147, 197, 253, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.mc-section h2 {
+  font-size: 1.45rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.mc-section-desc {
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+/* Benodigdhedenlijst */
+.mc-materials-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.mc-materials-list li {
+  background-color: rgba(9, 18, 41, 0.55);
+  border: 1px solid rgba(147, 197, 253, 0.18);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+/* Stappenkaarten */
+.mc-step {
+  background-color: rgba(9, 18, 41, 0.5);
+  border-left: 4px solid #3b82f6;
+  border-radius: 0 10px 10px 0;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.mc-step-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.mc-step-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #60a5fa;
+  letter-spacing: 0.08em;
+}
+
+.mc-step h3 {
+  font-size: 1.18rem;
+  color: #ffffff;
+}
+
+.mc-step p {
+  color: #cbd5e1;
+  font-size: 0.96rem;
+}
+
+.mc-tip {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background-color: rgba(37, 99, 235, 0.18);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #dbeafe;
+}
