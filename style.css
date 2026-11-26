@@ -43,53 +43,95 @@ body {
   color: #ffffff;
 }
 
-/* Hero / Welkomstblok */
+/* Hero / Welkomstblok in Hangar-stijl */
 .hero {
   position: relative;
   overflow: hidden;
   background: linear-gradient(115deg, #09132c 0%, #0e214d 58%, #153473 100%);
-  text-align: center;
-  padding: 60px 24px;
+  padding: 56px 24px;
   border-top: 2px solid #38bdf8;
   border-bottom: 2px solid rgba(147, 197, 253, 0.25);
 }
 
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(147, 197, 253, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(147, 197, 253, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.15));
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: left;
+  border-left: 4px solid #38bdf8;
+  padding-left: 24px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: #7dd3fc;
+  background-color: rgba(7, 13, 31, 0.65);
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 6px rgba(56, 189, 248, 0.7), 0 0 12px rgba(56, 189, 248, 0.35);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.22);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 1), 0 0 22px rgba(56, 189, 248, 0.75);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-dot {
+    animation: none;
+  }
+}
+
 .header1 {
-  font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   color: #ffffff;
 }
 
 .plainText {
   font-size: 1.08rem;
+  line-height: 1.65;
   color: #dbeafe;
   max-width: 640px;
-  margin: 0 auto 24px auto;
+  margin: 0 0 24px 0;
 }
-
-.linkPlain,
-.linkPlain-small {
-  display: inline-block;
-  background-color: rgba(56, 189, 248, 0.16);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: 1px solid #38bdf8;
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.2);
-  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-}
-
-.linkPlain:hover,
-.linkPlain-small:hover {
-  background-color: rgba(56, 189, 248, 0.28);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
-  transform: translateY(-2px);
-}
-
 /* Hoofdinhoud en kaarten */
 main {
   flex: 1;
