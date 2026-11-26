@@ -1,13 +1,16 @@
-/* Stijl voor minecraft-desktop.html */
+/* Stijl voor minecraft-desktop.html in Hangar / Cockpit-thema */
 .mc-body {
-  background-color: #091229;
+  background-color: #070d1f;
   color: #f1f5f9;
 }
 
 /* Header / Intro */
 .mc-hero {
-  background: linear-gradient(135deg, #0e1d42 0%, #172e66 100%);
-  border-bottom: 1px solid rgba(147, 197, 253, 0.22);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(115deg, #09132c 0%, #0e214d 58%, #153473 100%);
+  border-top: 2px solid #38bdf8;
+  border-bottom: 2px solid rgba(147, 197, 253, 0.25);
   padding: 52px 24px;
   text-align: center;
 }
@@ -16,17 +19,19 @@
   display: inline-block;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.78rem;
-  letter-spacing: 0.1em;
-  color: #93c5fd;
-  background-color: rgba(9, 18, 41, 0.65);
-  border: 1px solid rgba(147, 197, 253, 0.35);
+  letter-spacing: 0.12em;
+  color: #7dd3fc;
+  background-color: rgba(7, 13, 31, 0.7);
+  border: 1px solid rgba(125, 211, 252, 0.35);
   padding: 5px 12px;
-  border-radius: 999px;
+  border-radius: 4px;
   margin-bottom: 14px;
 }
 
 .mc-title {
   font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: #ffffff;
   margin-bottom: 12px;
 }
@@ -46,9 +51,9 @@
 }
 
 .mc-spec {
-  background-color: rgba(9, 18, 41, 0.7);
-  border: 1px solid rgba(147, 197, 253, 0.25);
-  border-radius: 10px;
+  background-color: rgba(7, 13, 31, 0.72);
+  border: 1px solid rgba(125, 211, 252, 0.28);
+  border-radius: 8px;
   padding: 10px 16px;
   display: flex;
   flex-direction: column;
@@ -58,7 +63,7 @@
 .mc-spec-label {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: #93c5fd;
 }
 
@@ -71,7 +76,7 @@
 /* Hoofdinhoud */
 .mc-main {
   flex: 1;
-  max-width: 860px;
+  max-width: 880px;
   width: 100%;
   margin: 0 auto;
   padding: 40px 20px 64px;
@@ -81,16 +86,20 @@
 }
 
 .mc-section {
-  background-color: #102047;
-  border: 1px solid rgba(147, 197, 253, 0.2);
+  background: linear-gradient(160deg, #102047 0%, #0b1636 100%);
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  border-top: 3px solid #38bdf8;
   border-radius: 12px;
   padding: 24px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 .mc-section h2 {
   font-size: 1.45rem;
   color: #ffffff;
   margin-bottom: 10px;
+  border-left: 3px solid #38bdf8;
+  padding-left: 12px;
 }
 
 .mc-section-desc {
@@ -107,8 +116,8 @@
 }
 
 .mc-materials-list li {
-  background-color: rgba(9, 18, 41, 0.55);
-  border: 1px solid rgba(147, 197, 253, 0.18);
+  background-color: rgba(7, 13, 31, 0.65);
+  border: 1px solid rgba(125, 211, 252, 0.22);
   border-radius: 8px;
   padding: 12px 14px;
   color: #e2e8f0;
@@ -117,8 +126,9 @@
 
 /* Stappenkaarten */
 .mc-step {
-  background-color: rgba(9, 18, 41, 0.5);
-  border-left: 4px solid #3b82f6;
+  background-color: rgba(7, 13, 31, 0.6);
+  border: 1px solid rgba(125, 211, 252, 0.16);
+  border-left: 4px solid #38bdf8;
   border-radius: 0 10px 10px 0;
   padding: 18px 20px;
   margin-top: 16px;
@@ -136,8 +146,8 @@
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.78rem;
   font-weight: 700;
-  color: #60a5fa;
-  letter-spacing: 0.08em;
+  color: #7dd3fc;
+  letter-spacing: 0.1em;
 }
 
 .mc-step h3 {
@@ -153,9 +163,9 @@
 .mc-tip {
   margin-top: 12px;
   padding: 10px 14px;
-  background-color: rgba(37, 99, 235, 0.18);
-  border: 1px solid rgba(96, 165, 250, 0.35);
+  background-color: rgba(56, 189, 248, 0.14);
+  border: 1px solid rgba(125, 211, 252, 0.35);
   border-radius: 8px;
   font-size: 0.9rem;
-  color: #dbeafe;
+  color: #e0f2fe;
 }
